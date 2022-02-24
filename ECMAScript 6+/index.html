@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMAScript 6+</title>
+</head>
+
+<body>
+
+    <h2>JavaScript Promise</h2>
+
+    <p>Wait 3 seconds (3000 milliseconds) for this page to change.</p>
+
+    <h1 id="demo"></h1>
+    <script src="./main.js"></script>
+    <script>
+        const myView = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve('I love u')
+            }, 1000)
+        })
+        myView.then(function(e) {
+            document.getElementById('demo').innerHTML = e
+        })
+    </script>
+</body>
+
+</html>
